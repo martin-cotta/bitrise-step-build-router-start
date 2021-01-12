@@ -188,7 +188,6 @@ func (app App) StartBuild(workflow string, buildParams json.RawMessage, buildNum
 		return StartResponse{}, err
 	}
 	params["workflow_id"] = workflow
-	params["skip_git_status_report"] = true
 
 	sourceBuildNumber := Environment{
 		MappedTo: "SOURCE_BITRISE_BUILD_NUMBER",
